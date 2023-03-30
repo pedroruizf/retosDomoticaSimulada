@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Puerta y sensor PIR | Retos de domótica simulada </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Pedro Ruiz Fernández" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Retos de domótica simulada</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Retos de domótica simulada</a></li>
+   <li><a href="elementos_y_pinout.html" class="no-ch">Elementos y pinout</a></li>
+   <li><a href="reto_led_y_ldr.html" class="no-ch">Reto led y ldr</a></li>
+   <li id="active"><a href="puerta_y_sensor_pir.html" class="active no-ch">Puerta y sensor PIR</a></li>
+   <li><a href="sensor_de_vapor_gas_y_ventilador.html" class="no-ch">Sensor de vapor, gas y ventilador</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="reto_led_y_ldr.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="sensor_de_vapor_gas_y_ventilador.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Puerta y sensor PIR</h1></header>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id5">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Tarea</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta5_121_2" class="block iDevice_content">
+<dl class="pbl-task-info"><dt class="pbl-task-duration"><span>Duración:</span></dt><dd class="pbl-task-duration">15</dd><dt class="pbl-task-participants"><span>Agrupamiento:</span></dt><dd class="pbl-task-participants">2</dd></dl><div class="pbl-task-description"><p>Se trata de controlar la puerta giratoria de la casa accionada por un servomotor (pin digital 9) a través de un sensor PIR (pin digital 2), que es un sensor de presencia que nos devuelve verdadero si detecta presencia y falso si no la detecta. La puerta debe abrirse (ángulo 90º) cuando detecta presencia y esperar abierta un tiempo de cortesía de 3 segundos. Debe cerrarse cuando no detecta presencia (ángulo 0º).  Además en la pantalla LCD deben aparecer mensajes diferentes en función si detecta o no a personas. </p>
+<p><img src="pir_puerta.gif" alt="pir puerta" width="500" height="281" /></p>
+<p></p>
+<p></p></div><div class="iDevice_buttons feedback-button js-required"><input type="button" class="feedbackbutton" value="Ayuda" /></div><div class="feedback js-feedback js-hidden"><p><img src="pid_puerta.png" alt="codigo pir puerta" width="700" height="665" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id6">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Elementos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_122_2" class="block iDevice_content">
+<div class="exe-text"><table border="0" style="height: 263px; width: 34.9725%;" cellspacing="10">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 18.0866%; height: 18px; text-align: center;">Pir</td>
+<td style="width: 8.1467%; height: 18px; text-align: center;">Servo</td>
+<td style="width: 8.1467%; text-align: center;">LCD</td>
+</tr>
+<tr style="height: 200px; text-align: center;">
+<td style="width: 18.0866%; height: 200px;"><img src="pir.png" alt="pir" width="200" height="142" /></td>
+<td style="width: 8.1467%; height: 200px;"><img src="servo.png" alt="servo" width="200" height="195" /></td>
+<td style="width: 8.1467%;">
+<p><img src="lcd_a.png" alt="lcd a" width="200" height="93" /></p>
+<p><img src="lcd_r.png" alt="lcd r" width="200" height="90" /></p>
+</td>
+</tr>
+<tr style="height: 45px; text-align: center;">
+<td style="width: 18.0866%; height: 45px;">
+<p><a href="https://wiki.keyestudio.com/Ks0052_keyestudio_PIR_Motion_Sensor">https://wiki.keyestudio.com/Ks0052_keyestudio_PIR_Motion_Sensor</a></p>
+</td>
+<td style="width: 8.1467%; height: 45px;">
+<p><a href="https://wiki.keyestudio.com/Ks0194_keyestudio_Micro_Servo">https://wiki.keyestudio.com/Ks0194_keyestudio_Micro_Servo</a></p>
+</td>
+<td style="width: 8.1467%;">
+<p><a href="https://wiki.keyestudio.com/KS0061A_Keyestudio_1602_I2C_Module">https://wiki.keyestudio.com/KS0061A_Keyestudio_1602_I2C_Module</a></p>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="reto_led_y_ldr.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="sensor_de_vapor_gas_y_ventilador.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
