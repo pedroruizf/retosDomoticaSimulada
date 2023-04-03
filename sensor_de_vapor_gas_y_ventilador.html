@@ -25,13 +25,21 @@
    <li><a href="index.html" class="daddy main-node">Retos de domótica simulada</a></li>
    <li><a href="elementos_y_pinout.html" class="no-ch">Elementos y pinout</a></li>
    <li><a href="reto_led_y_ldr.html" class="no-ch">Reto led y ldr</a></li>
+   <li><a href="sensor_de_vapor_y_ventana.html" class="no-ch">Sensor de vapor y ventana</a></li>
    <li><a href="puerta_y_sensor_pir.html" class="no-ch">Puerta y sensor PIR</a></li>
+   <li><a href="pulsadores_y_leds.html" class="no-ch">Pulsadores y leds</a></li>
+   <li><a href="pulsadores_y_led_pwm.html" class="no-ch">Pulsadores y led pwm</a></li>
+   <li><a href="ldr_y_led_pwm.html" class="no-ch">Ldr y led pwm</a></li>
+   <li><a href="sensor_de_humedad_y_rel.html" class="no-ch">Sensor de humedad y relé</a></li>
    <li id="active"><a href="sensor_de_vapor_gas_y_ventilador.html" class="active no-ch">Sensor de vapor, gas y ventilador</a></li>
+   <li><a href="contrasea_y_puerta.html" class="no-ch">Contraseña y puerta</a></li>
+   <li><a href="retos_resueltos.html" class="no-ch">Retos resueltos</a></li>
+   <li><a href="fuentes.html" class="no-ch">Fuentes</a></li>
 </ul>
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="puerta_y_sensor_pir.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+<a href="sensor_de_humedad_y_rel.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="contrasea_y_puerta.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
@@ -39,21 +47,21 @@
 <header id="nodeDecoration"><h1 id="nodeTitle">Sensor de vapor, gas y ventilador</h1></header>
 <article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id9">
 <div class="iDevice emphasis1" >
-<header class="iDevice_header"><h1 class="iDeviceTitle">Tarea</h1></header>
+<header class="iDevice_header"><h1 class="iDeviceTitle">Reto</h1></header>
 <div class="iDevice_inner">
 <div class="iDevice_content_wrapper">
 <div id="ta9_125_2" class="block iDevice_content">
-<dl class="pbl-task-info"><dt class="pbl-task-duration"><span>Duración:</span></dt><dd class="pbl-task-duration">20</dd><dt class="pbl-task-participants"><span>Agrupamiento:</span></dt><dd class="pbl-task-participants">2</dd></dl><div class="pbl-task-description"><p>Se trata de poner en marcha el motor de dc cuando los valores de humedad (vapor de agua) o de gases supere o baje de cierto límite.</p>
+<dl class="pbl-task-info"><dt class="pbl-task-duration"><span>Duración:</span></dt><dd class="pbl-task-duration">20</dd><dt class="pbl-task-participants"><span>Agrupamiento:</span></dt><dd class="pbl-task-participants">2</dd></dl><div class="pbl-task-description"><p>Se trata de poner en marcha el motor de dc (corriente continua) cuando los valores de humedad (vapor de agua) o de gases supere o baje de cierto límite.</p>
 <p>Los sensores y actuadores que lleva el sistema son:</p>
 <ul>
-<li>Sensor de vapor de agua: pin analógico 3 (A3). Mide el vapor de agua en el ambiente entre 0 y 1023 valores.</li>
-<li>Sensor de gas: pin analógico 0 (A0). Este sensor es capaz de medir en un rango de 0 a 1023 valores: GLP, butano, propano, etanol, hidrógeno y humo.</li>
-<li>Motor de dc: está conectado a los pines 6 y 7. Para que gire en un sentido se activa el pin 6 y se desactiva el 7, si quieres que gire en el sentido contrario desactiva el pin 6 y activa el 7.</li>
-<li>Pantalla LCD.</li>
+<li><span style="text-decoration: underline;">Sensor de vapor de agua</span>: pin analógico 3 (A3). Mide el vapor de agua en el ambiente (sensor de lluvia) entre 0 y 1023 valores.</li>
+<li><span style="text-decoration: underline;">Sensor de gas</span>: pin analógico 0 (A0). Este sensor es capaz de medir en un rango de 0 a 1023 valores: GLP, butano, propano, etanol, hidrógeno y humo.</li>
+<li><span style="text-decoration: underline;">Motor de dc (ventilador)</span>: está conectado a los pines 6 y 7. Para que gire en un sentido se activa el pin 6 y se desactiva el 7, si quieres que gire en el sentido contrario desactiva el pin 6 y activa el 7. Además se puede controlar su velocidad de giro.</li>
+<li><span style="text-decoration: underline;">Pantalla LCD</span>.</li>
 </ul>
 <p>El funcionamiento concreto será cuando la humedad supere el valor de 200 o la medición de gases baje de 730 (gases detectados), se pondrá en marcha el motor del ventilador en un sentido.</p>
-<p><img src="vapor_gas_motor.gif" alt="vapor gas motor" width="500" height="281" /></p>
-<p></p></div><div class="iDevice_buttons feedback-button js-required"><input type="button" class="feedbackbutton" value="Ayuda" /></div><div class="feedback js-feedback js-hidden"><p><img src="vapor_gas_motor.png" alt="codigo vapor gas motor" width="901" height="352" /></p></div>
+<p><img src="vapor_gas_motor2.gif" alt="vapor gas motor" width="500" height="281" /></p>
+<p></p></div><div class="iDevice_buttons feedback-button js-required"><input type="button" class="feedbackbutton" value="Ayuda" /></div><div class="feedback js-feedback js-hidden"><p><img src="vapor_gas_motor.png" alt="codigo vapor gas motor" width="899" height="355" /></p></div>
 </div>
 </div>
 </div>
@@ -65,43 +73,32 @@
 <div class="iDevice_inner">
 <div class="iDevice_content_wrapper">
 <div id="ta8_124_2" class="block iDevice_content">
-<div class="exe-text"><table border="0" style="height: 73px; width: 86.5953%; margin-left: auto; margin-right: auto;" cellspacing="10">
+<div class="exe-text"><table border="0" style="height: 83px; width: 69.1631%; float: left;" cellspacing="10">
 <tbody>
 <tr style="height: 18px;">
-<td style="width: 18.34%; height: 18px; text-align: center;">Sensor de vapor</td>
-<td style="width: 18.2061%; height: 18px; text-align: center;">Sensor de gas</td>
-<td style="width: 34.4043%; height: 18px; text-align: center;">Motor de CC con Ventilador</td>
+<td style="width: 18.34%; height: 18px; text-align: center;"><a href="https://wiki.keyestudio.com/Ks0203_keyestudio_Steam_Sensor" target="_blank" rel="noopener">Sensor de vapor</a></td>
+<td style="width: 18.2061%; height: 18px; text-align: center;"><a href="https://wiki.keyestudio.com/Ks0040_keyestudio_Analog_Gas_Sensor" target="_blank" rel="noopener">Sensor de gas</a></td>
+<td style="width: 17.8428%; height: 18px; text-align: center;"><a href="https://wiki.keyestudio.com/Ks0168_keyestudio_L9110_fan_control_module" target="_blank" rel="noopener">Motor de CC con Ventilador</a></td>
 </tr>
 <tr style="height: 10px;">
 <td style="width: 18.34%; height: 10px; text-align: center;"><img src="sensor_vapor.png" alt="sensor vapor" width="201" height="113" /></td>
 <td style="width: 18.2061%; height: 10px; text-align: center;"><img src="sensor_gas.jpg" alt="sensor gas" width="200" height="200" style="display: block; margin-left: auto; margin-right: auto;" /></td>
-<td style="width: 34.4043%; height: 10px; text-align: center;"><img src="motor_ventilador.png" alt="motor ventilador" width="200" height="254" /></td>
+<td style="width: 17.8428%; height: 10px; text-align: center;"><img src="motor_ventilador.png" alt="motor ventilador" width="200" height="254" /></td>
 </tr>
-<tr style="height: 45px; text-align: center;">
-<td style="width: 18.34%; height: 45px; text-align: center;">
-<p><a href="https://wiki.keyestudio.com/Ks0203_keyestudio_Steam_Sensor">https://wiki.keyestudio.com/Ks0203_keyestudio_Steam_Sensor</a></p>
+<tr style="height: 45px;">
+<td style="width: 18.34%; text-align: center; height: 45px;">
+<p><a href="https://wiki.keyestudio.com/KS0061A_Keyestudio_1602_I2C_Module" target="_blank" rel="noopener">LCD</a></p>
 </td>
-<td style="width: 18.2061%; height: 45px; text-align: center;">
-<p><a href="https://wiki.keyestudio.com/Ks0040_keyestudio_Analog_Gas_Sensor">https://wiki.keyestudio.com/Ks0040_keyestudio_Analog_Gas_Sensor</a></p>
+<td style="width: 18.2061%; text-align: center; height: 45px;"></td>
+<td style="width: 17.8428%; text-align: center; height: 45px;"></td>
+</tr>
+<tr style="height: 10px;">
+<td style="width: 18.34%; text-align: center; height: 10px;">
+<p><img src="lcd_a.png" alt="lcd a" width="200" height="93" /></p>
+<p><img src="lcd_r.png" alt="lcd r" width="200" height="90" /></p>
 </td>
-<td style="width: 34.4043%; height: 45px; text-align: center;">
-<p><a href="https://wiki.keyestudio.com/Ks0168_keyestudio_L9110_fan_control_module">https://wiki.keyestudio.com/Ks0168_keyestudio_L9110_fan_control_module</a></p>
-</td>
-</tr>
-<tr style="height: 0px; text-align: center;">
-<td style="width: 18.34%; height: 0px; text-align: center;"></td>
-<td style="width: 18.2061%; height: 0px; text-align: center;"></td>
-<td style="width: 34.4043%; height: 0px; text-align: center;"></td>
-</tr>
-<tr style="height: 0px; text-align: center;">
-<td style="width: 18.34%; height: 0px; text-align: center;"></td>
-<td style="width: 18.2061%; height: 0px; text-align: center;"></td>
-<td style="width: 34.4043%; height: 0px; text-align: center;"></td>
-</tr>
-<tr style="height: 0px; text-align: center;">
-<td style="width: 18.34%; height: 0px;"></td>
-<td style="width: 18.2061%; height: 0px;"></td>
-<td style="width: 34.4043%; height: 0px;"></td>
+<td style="width: 18.2061%; text-align: center; height: 10px;"></td>
+<td style="width: 17.8428%; text-align: center; height: 10px;"></td>
 </tr>
 </tbody>
 </table></div>
@@ -117,7 +114,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="puerta_y_sensor_pir.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+<a href="sensor_de_humedad_y_rel.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="contrasea_y_puerta.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 </div>

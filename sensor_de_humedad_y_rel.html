@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Sensor de humedad y relé | Retos de domótica simulada </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Pedro Ruiz Fernández" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Retos de domótica simulada</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Retos de domótica simulada</a></li>
+   <li><a href="elementos_y_pinout.html" class="no-ch">Elementos y pinout</a></li>
+   <li><a href="reto_led_y_ldr.html" class="no-ch">Reto led y ldr</a></li>
+   <li><a href="sensor_de_vapor_y_ventana.html" class="no-ch">Sensor de vapor y ventana</a></li>
+   <li><a href="puerta_y_sensor_pir.html" class="no-ch">Puerta y sensor PIR</a></li>
+   <li><a href="pulsadores_y_leds.html" class="no-ch">Pulsadores y leds</a></li>
+   <li><a href="pulsadores_y_led_pwm.html" class="no-ch">Pulsadores y led pwm</a></li>
+   <li><a href="ldr_y_led_pwm.html" class="no-ch">Ldr y led pwm</a></li>
+   <li id="active"><a href="sensor_de_humedad_y_rel.html" class="active no-ch">Sensor de humedad y relé</a></li>
+   <li><a href="sensor_de_vapor_gas_y_ventilador.html" class="no-ch">Sensor de vapor, gas y ventilador</a></li>
+   <li><a href="contrasea_y_puerta.html" class="no-ch">Contraseña y puerta</a></li>
+   <li><a href="retos_resueltos.html" class="no-ch">Retos resueltos</a></li>
+   <li><a href="fuentes.html" class="no-ch">Fuentes</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="ldr_y_led_pwm.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="sensor_de_vapor_gas_y_ventilador.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Sensor de humedad y relé</h1></header>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id14">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Reto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta14_122_2" class="block iDevice_content">
+<dl class="pbl-task-info"><dt class="pbl-task-duration"><span>Duración:</span></dt><dd class="pbl-task-duration">15</dd><dt class="pbl-task-participants"><span>Agrupamiento:</span></dt><dd class="pbl-task-participants">2</dd></dl><div class="pbl-task-description"><p>El sensor de humedad de suelo, es un sensor analógico (nos da valores entre 0 y 1023), nos da menor valor cuando el suelo está más seco y mayor valor cuando está más húmedo. En nuestro caso está conectado al pin analógico 2 (A2).</p>
+<p>El reto consiste en accionar el relé (conmutador telecomandado), cuando el valor de humedad disminuya de cierto valor (terreno seco). El relé a su vez puede activar o desactivar una bomba de riego que esté conectada a él. El relé está conectado al pin digital 12.</p>
+<p>Además debemos mostrar en la pantalla LCD el valor de la humedad de suelo.</p>
+<p><img src="humedad_rele_lcd.gif" alt="humedad rele lcd" width="500" height="281" /></p></div><div class="iDevice_buttons feedback-button js-required"><input type="button" class="feedbackbutton" value="Ayuda" /></div><div class="feedback js-feedback js-hidden"><p><img src="humedad_rele.png" alt="codigo humedad rele lcd" width="700" height="488" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id21">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Componentes</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta21_122_2" class="block iDevice_content">
+<div class="exe-text"><table border="0" style="width: 53.4145%; height: 36px;" cellspacing="10">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 21.6362%; height: 18px; text-align: center;"><a href="https://wiki.keyestudio.com/Ks0049_keyestudio_Soil_Humidity_Sensor" target="_blank" rel="noopener">Sensor de humedad de suelo</a></td>
+<td style="width: 15.1453%; height: 18px; text-align: center;"><a href="https://wiki.keyestudio.com/Ks0011_keyestudio_5V_Relay_Module" target="_blank" rel="noopener">Relé</a></td>
+<td style="width: 16.6329%; height: 18px; text-align: center;"><a href="https://wiki.keyestudio.com/KS0061A_Keyestudio_1602_I2C_Module" target="_blank" rel="noopener">LCD</a></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 21.6362%; height: 18px; text-align: center;"><img src="sensor_humedad_suelo.jpg" alt="sensor humedad suelo" width="299" height="116" /></td>
+<td style="width: 15.1453%; height: 18px; text-align: center;"><img src="rele.png" alt="rele" width="200" height="121" /></td>
+<td style="width: 16.6329%; height: 18px; text-align: center;">
+<p><img src="lcd_a.png" alt="lcd a" width="200" height="93" /></p>
+<p><img src="lcd_r.png" alt="lcd r" width="200" height="90" /></p>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="ldr_y_led_pwm.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="sensor_de_vapor_gas_y_ventilador.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
